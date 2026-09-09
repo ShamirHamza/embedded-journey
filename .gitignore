@@ -1,0 +1,15 @@
+# build output
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+a.out
+
+# vendor documentation — 30+ MB, freely available from st.com
+notes/datasheets/
+
+# editor
+.vscode/
+*.swp
