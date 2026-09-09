@@ -13,3 +13,6 @@ notes/datasheets/
 # editor
 .vscode/
 *.swp
+
+# compiled binaries
+bin/
