@@ -1,17 +1,19 @@
 #include <stdio.h>
-#include <math.h>
-int main (){
-    int x;
-    int a=0;
-    int b=1;
-    printf("Enter the number of terms here:- ");
-    scanf("%d",&x);
-    printf("%d\n%d\n",a,b);
-    for(int i=0;i<x;i++){
-        int fib=a+b;
-        a=b;
-        b=fib;
-        printf("%d\n",fib);
+
+int fibbonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibbonacci(n - 1) + fibbonacci(n - 2);
+}
+
+int main(){
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci Series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", fibbonacci(i));
     }
     return 0;
 }

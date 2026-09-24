@@ -5,12 +5,17 @@ int main (){
     int b=1;
     printf("Enter the number of terms here:- ");
     scanf("%d",&x);
-    printf("%d\n%d\n",a,b);
-    for(int i=0;i<x;i++){
+    if (x!=0 && x!=1){
+        printf("%d\n%d\n",a,b);
+    } else {
+        printf("%d\n",a);
+        return 0;
+    }
+    for(int i=0;i<(x-2);i++){
         int fib=a+b;
+        printf("%d\n",fib);
         a=b;
         b=fib;
-        printf("%d\n",fib);
     }
     return 0;
 }
