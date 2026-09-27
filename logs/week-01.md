@@ -1,20 +1,55 @@
 # Week 01 — 21-27 Sep 2026
 **Rhythm:** term, 8 h planned
-**Hours on the course:** 2.5 hrs
-## What I predicted 
-1) For 5/9 , i had predicted that the answer will come out to be 0.555556.
-2) For x - I thought that it will print the value 0.555... because float datatype prints the decimal values but in reality the answer came out to be 0.0000..
-3) For y - i thought the answer will be upto one decimal place (i.e., 0.5) because the numerator was 5.0 but in reality it was as 0.555...
-4) For z - i genuinily did not know about this one.
-5) for (a=0) , it will assign the value of a to 0 irespective of whatever the initially selected value was. I typed 7 in the input that gave the output as even.
+**Hours actually spent:** 18 hrs
+
+## What I predicted
+- 5/9 → I said 0.555556. Reality: 0
+- float x = 5/9 → I said 0.555. Reality: 0.000000
+- float y = 5.0/9 → I said 0.5. Reality: 0.555556
+- (float)5/9 → didn't know. Reality: 0.555556
+- if (a=0) with input 7 → ← what I expected / what happened
+- Day 3 prediction: at least 3 of 5 first-try. Actual: ←
+
 ## What I did
-Programs hello.c , add.c , c2f.c and circle.c were completed and successfully ran on day 1.
-Programs largest3.c , evenodd.c , grade.c and countdown.c were completed and successfully ran on day 2. 
-## What broke, and the root cause 
-The main cause and root cause till now are the Linux commands for commiting or changing the directories and all 
+- D1 (21 Sep): hello, add, c2f, circle
+- D2 (22 Sep): largest3, evenodd, grade, countdown, table
+- D3 (23 Sep): sumofdigits, reverse, factorial — fib and prime unfinished
+- D4 (24 Sep): fib and prime finished
+- D5 (25 Sep): swap, sumN, stars
+- D6 (26 Sep): calc, menu ← (power.c done or not?)
+- **Total: 19 programs**
+
+## What broke, and the root cause
+- add.c empty → typed but never saved; the file on disk and the editor disagreed
+- garbled lines → OVR (overwrite) mode was on
+- "No such file or directory" → ran gcc from the wrong folder
+- 7 printed as "even" → `=` instead of `==`; assignment has a value, 5 is true
+- fib printed 0,1,2,4,8 → overwrote `a` before computing the next term
+- prime said everything composite → loop reached i == n, and n % n is always 0
+- duplicate files (fib2.c, two table.c) → made a new file instead of editing and committing
+- menu loops forever on letter input → ← why (scanf and the input buffer)
+
 ## What I measured
-Till now the average number of attempts to fully run the programs correctly are 3 to 4 attempts
+- **First-try (code correct on the first gcc run): 10 / 19**
+  hello, c2f, circle, sumofdigits, grade, table, swap, power, calc, reverse
+- **Needed code fixes: 9 / 19**
+  add, largest3, evenodd, countdown, fib, prime, factorial, sumN, menu
+- Separate failure mode: wrong folder / wrong filename in the gcc command.
+  Cost me several attempts on Day 1 and Day 3. Not a code error.
+- W01 assessment, 45 min, closed book: incomplete. Average worked;
+  largest-of-ten not constructed.
+- `-pedantic` caught 3 declaration-after-label warnings that -Wall -Wextra missed
+
 ## What I still cannot explain
-I couldn't explain the value for z.
+- Why did the running total come easily and the running maximum not, when they're the same shape?
+- Why does scanf need &a but printf doesn't? ← attempt an answer
+- What does #include <stdio.h> actually do? ← attempt an answer
+- Why return 0 at the end of main? ← attempt an answer
+- ←  anything else
+
+## Claude's failed predictions this week
+- Said `make` almost certainly came with g++ — it didn't
+- Said declaration after a `case` label wouldn't compile under -std=c17 — it did (GNU extension)
+
 ## Prediction for next week
-Till next week , i can start coding and completing the programs and running them successfully in uner 2 attempts
+- ←  a number you can check next Sunday
