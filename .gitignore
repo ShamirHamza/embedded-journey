@@ -16,3 +16,4 @@ notes/datasheets/
 
 # compiled binaries
 bin/
+*.s
