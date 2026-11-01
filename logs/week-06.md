@@ -1,3 +1,7 @@
+## Measured
+- Code attempts: - 2
+- Command attempts:- 1
+
 ## volatile — W06
 
 **The rule:** `volatile` tells the compiler that a variable can change
